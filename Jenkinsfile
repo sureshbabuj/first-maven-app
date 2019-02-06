@@ -1,3 +1,4 @@
+// This Pipeline is for maven projects
 pipeline{
     agent any
     stages{
