@@ -18,7 +18,7 @@ stage ('Initialize') {
         }
 stage ('send artifacts'){
    steps {
- sshPublisher(publishers: [sshPublisherDesc(configName: 'DevOps52', transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: 'ls', execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: '/root/', remoteDirectorySDF: false, removePrefix: '', sourceFiles: '/home/suresh/maven/first-maven-app/target')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)])
+sshPublisher(publishers: [sshPublisherDesc(configName: 'DevOps52', transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: 'ls', execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: '/root/', remoteDirectorySDF: false, removePrefix: '', sourceFiles: '$WORKSPACE/*.jar')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)])
 
 }
     }
