@@ -2,10 +2,6 @@
 pipeline{
     agent any
     stages{
-        stage('clone')
-             steps{
-              git credentialsId: '1713ee85-d3ae-462b-984f-6b8f15c5a6db', url: 'https://github.com/sureshbabuj/first-maven-app.git'
-             }
 stage ('Initialize') {
             steps {
                 sh '''
